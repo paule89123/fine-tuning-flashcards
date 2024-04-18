@@ -1,0 +1,32 @@
+[
+  {
+    "prompt": "create 3 flashcards about the American Revolution",
+    "output": [
+      {
+        "front": "What year did the American Revolution begin?",
+        "back": "The American Revolution began in 1775."
+      },
+      {
+        "front": "Who wrote the Declaration of Independence?",
+        "back": "Thomas Jefferson wrote the Declaration of Independence."
+      },
+      {
+        "front": "When was the Treaty of Paris signed, ending the American Revolution?",
+        "back": "The Treaty of Paris was signed in 1783, officially ending the American Revolution."
+      }
+    ]
+  },
+  {
+    "prompt": "create 2 flashcards about photosynthesis",
+    "output": [
+      {
+        "front": "What is photosynthesis?",
+        "back": "Photosynthesis is the process by which plants convert sunlight, carbon dioxide, and water into glucose and oxygen."
+      },
+      {
+        "front": "In what organelle does photosynthesis occur?",
+        "back": "Photosynthesis occurs in the chloroplasts of plant cells."
+      }
+    ]
+  }
+]
