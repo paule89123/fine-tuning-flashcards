@@ -20,11 +20,11 @@ config = LoraConfig(r=LORA_R, lora_alpha=LORA_ALPHA, target_modules=[
 model = get_peft_model(model, config)
 
 # Load the tiny dataset
-dataset = load_dataset("json", data_files="tiny_flashcards_dataset.json")
+dataset = load_dataset("json", data_files="tiny-dataset.json")
 train_data = dataset["train"]
 
 def generate_prompt(sample):
-    sys_msg = f"Create flashcards based on the following prompt: {sample['prompt']}"
+    sys_msg = f"You are an assistant that helps users create flashcards based on the content they provide. Your task is to generate a set of flashcards in JSON format, where each flashcard has a 'front' (question or term) and a 'back' (answer or definition). The number of flashcards generated should match the user's request. Aim to create concise, informative, and well-structured flashcards that effectively capture the key points of the given content. Here is the user's prompt: {sample['prompt']}."
     flashcards = "\n".join([f"{{\"front\": \"{card['front']}\", \"back\": \"{card['back']}\"}}" for card in sample["output"]])
     p = f"<s> [INST]{sys_msg}[/INST]\n{flashcards}</s>"
     return p
